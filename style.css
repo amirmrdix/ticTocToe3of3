@@ -1,0 +1,78 @@
+@font-face {
+    font-family: font;
+    src: url(TeshrinAR+LT-Bold.ttf);
+}
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+}
+:root{
+    --Zard : #fdb445;
+    --Sorati : #F266AB;
+    --Banafsh : #A459D1;
+    --Abi : #c2fbff;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: font;
+    background-color: var(--Abi);
+    user-select: none;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+.gameContainer{
+    width: 24em; height: 24em;
+    display: grid;
+    grid-template-columns: repeat(3,128px);
+    grid-template-rows: repeat(3,128px);
+}
+.cell{
+    background-color: var(--Banafsh);
+    border: 3.5px solid var(--Abi);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: 0.2s;
+    color: white;
+}
+.cell:not(.selected):hover{
+    background-color: var(--Sorati);
+}
+.selected{
+    background-color: #9122d1;
+}
+.gameStatus{
+    margin-top: 0.5em;
+    font-size: 1.9rem;
+}
+.gameRestart{
+    font-size: 1.1rem;
+    background-color: var(--Zard);
+    border-radius: 0.8rem;
+    width: 9em;
+    padding: 1rem;
+    padding-top: 1.1rem;
+    font-family: font;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: 0.2s;
+}
+.gameRestart:hover{
+    background-color: #fccb81;
+    font-size: 1.08rem;
+}
